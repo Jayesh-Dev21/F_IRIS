@@ -1,0 +1,38 @@
+camera:
+  device_id: 0           # 0 = default webcam, 1+ for external cameras
+  fps: 30
+  resolution: [1280, 720]
+  flip_horizontal: false
+  warmup_frames: 30      # Frames to capture before starting detection
+
+monitoring:
+  active: true
+  motion_threshold: 25   # Sensitivity (0-100, lower = more sensitive)
+  min_motion_area: 500   # Minimum pixels to trigger detection
+  cooldown_seconds: 5    # Delay between analyses to prevent spam
+  
+intelligence:
+  provider: "openai"     # openai or anthropic
+  model: "gpt-4o"
+  max_tokens: 300
+  temperature: 0.3       # Low for consistent analysis
+  include_recent_context: true
+  context_window: 5      # Last N events to include as context
+
+alerts:
+  enabled: true
+  telegram:
+    enabled: true
+    alert_on_threat_level: "medium"  # none, low, medium, high
+    include_snapshot: true
+  
+storage:
+  db_path: "data/events.db"
+  snapshots_dir: "data/snapshots"
+  max_snapshot_age_days: 30  # Auto-cleanup old images
+  snapshot_quality: 85        # JPEG quality (0-100)
+
+logging:
+  level: "INFO"          # DEBUG, INFO, WARNING, ERROR
+  file: "data/iris.log"
+  console: true
