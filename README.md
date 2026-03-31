@@ -1,15 +1,16 @@
 # IRIS - Intelligent Real-time Inspection System
 
-**An AI-powered security monitoring agent with computer vision and GPT-4o.**
+```
+An AI-powered security monitoring agent with computer vision and GPT-4o.
+```
+
+<div align="center">
+  <img src="assets/banner.png" alt="IRIS"/>
+</div>
 
 > **⚙️ Setup:** See [SETUP.md](SETUP.md) for installation and usage instructions.
 
 > **💡 Inspiration:** IRIS is inspired by [The Machine](https://personofinterest.fandom.com/wiki/The_Machine) from the TV series *Person of Interest* - a mass surveillance system that watches, analyzes, and identifies threats in real-time. While our IRIS is much simpler (and privacy-focused!), it shares the same philosophy: intelligent observation that understands context, not just raw data collection.
-
-<div align="center">
-  <img src="IRIS-logo/IRIS.jpg" alt="IRIS" width="500"/>
-</div>
-
 
 ## What is IRIS?
 
