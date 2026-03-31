@@ -6,7 +6,9 @@
 
 > **💡 Inspiration:** IRIS is inspired by [The Machine](https://personofinterest.fandom.com/wiki/The_Machine) from the TV series *Person of Interest* - a mass surveillance system that watches, analyzes, and identifies threats in real-time. While our IRIS is much simpler (and privacy-focused!), it shares the same philosophy: intelligent observation that understands context, not just raw data collection.
 
-![IRIS Monitoring](IRIS-logo/IRIS.jpg)
+<div align="center">
+  <img src="IRIS-logo/IRIS.jpg" alt="IRIS" width="500"/>
+</div>
 
 ---
 
