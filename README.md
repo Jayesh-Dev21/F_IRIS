@@ -10,7 +10,6 @@
   <img src="IRIS-logo/IRIS.jpg" alt="IRIS" width="500"/>
 </div>
 
----
 
 ## What is IRIS?
 
@@ -24,7 +23,6 @@ IRIS (Intelligent Real-time Inspection System) is a security monitoring agent th
 - **Alerts** you via Telegram with snapshots when threats are detected
 - **Remembers** events in a searchable database
 
----
 
 ## Why IRIS?
 
@@ -41,13 +39,17 @@ Traditional security cameras have problems:
 - ✅ Providing context ("Unknown person at night" vs "Delivery at 2pm")
 - ✅ Learning from recent events for better decisions
 
----
 
 ## Architecture
 
+
 IRIS follows a modular pipeline architecture:
 
-```
+<div align="center">
+  <img src="docs/iris_architecture.svg" alt="IRIS Architecture" width="700"/>
+</div>
+
+<!-- ```
                 ┌─────────────────────────────────────────────────────────────┐
                 │                     IRIS Architecture                       │
                 └─────────────────────────────────────────────────────────────┘
@@ -95,9 +97,7 @@ IRIS follows a modular pipeline architecture:
                                       │  Interface  │  Rich terminal UI
                                       │             │  (src/cli/interface.py)
                                       └─────────────┘
-```
-
----
+``` -->
 
 ## How It Works
 
@@ -113,7 +113,6 @@ IRIS opens your webcam and watches continuously. It uses **background subtractio
 
 **Cost optimization:** No API calls are made when nothing is happening. Your camera just watches silently.
 
----
 
 ### 2. Motion Detection
 
@@ -133,8 +132,6 @@ This prevents:
 - ❌ Analyzing every single frame (expensive!)
 - ❌ Spam alerts from continuous motion
 - ❌ False positives from minor changes
-
----
 
 ### 3. Intelligent Analysis
 
@@ -182,8 +179,6 @@ Guidelines:
 }
 ```
 
----
-
 ### 4. Threat Assessment
 
 IRIS uses a 4-level severity system:
@@ -199,8 +194,6 @@ IRIS uses a 4-level severity system:
 - Same person during day = "none"
 - Same person at 3 AM = "medium"
 - Multiple unknown people + night = "high"
-
----
 
 ### 5. Event Storage
 
@@ -224,8 +217,6 @@ events
 - Filename: `event_YYYYMMDD_HHMMSS_<id>.jpg`
 - Configurable quality (default: 85%)
 - Auto-cleanup after 30 days (configurable)
-
----
 
 ### 6. Intelligent Alerting
 
@@ -261,8 +252,6 @@ Event ID: #42
 
 With attached snapshot for visual verification.
 
----
-
 ### 7. Query & Analysis
 
 Rich CLI for event analysis:
@@ -287,8 +276,6 @@ uv run python src/main.py query stats
 - Threat level distribution
 - Average people count
 - Busiest hours (future feature)
-
----
 
 ## Technical Stack
 
@@ -339,8 +326,6 @@ IRIS/
 ├── README.md                  # This file
 └── SETUP.md                   # Setup & usage guide
 ```
-
----
 
 ## Key Features Explained
 
@@ -396,8 +381,6 @@ Analysis: Normal activity (continuity)
 - Snapshots: Auto-deleted after 30 days (configurable)
 - Logs: Rotated automatically
 
----
-
 ## Screenshots
 
 ### Starting IRIS
@@ -421,13 +404,9 @@ Analysis: Normal activity (continuity)
 
 *Mobile notification with snapshot*
 
----
-
 ## License
 
-MIT License - See LICENSE file for details.
-
----
+MIT License - See [LICENSE](LICENSE) file for details.
 
 ## Support
 
